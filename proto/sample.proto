@@ -1,0 +1,6 @@
+syntax = "proto2";
+package sample;
+
+message Sample {
+  repeated bytes docids = 1;
+}
