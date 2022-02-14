@@ -1,6 +1,13 @@
-syntax = "proto2";
-package sample;
+syntax = "proto3";
+
+option cc_enable_arenas = true;
+package inspector;
 
 message Sample {
+  message UserFeature {
+    bytes uid = 1;
+    repeated bytes short_interest = 2;
+  }
   repeated bytes docids = 1;
+  repeated UserFeature user_feature = 2;
 }
